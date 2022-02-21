@@ -1,12 +1,15 @@
 package com.zeroheat.librarypractice_20220221
 
+import android.Manifest
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.gun0912.tedpermission.PermissionListener
+import com.gun0912.tedpermission.normal.TedPermission
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,10 +41,14 @@ class MainActivity : AppCompatActivity() {
                 }
 
             }
-
-
-
+            //      실제로 권한을 물어보자.
+            TedPermission.create()
+                .setPermissionListener(pl)
+                .setPermissions(Manifest.permission.CALL_PHONE)
+                .check()
         }
+
+
 
 
 //        버튼 이외의, TextView, ImageView, LinearLayout 등등도 setOnClickListener로 이벤트 처리가 가능함.
