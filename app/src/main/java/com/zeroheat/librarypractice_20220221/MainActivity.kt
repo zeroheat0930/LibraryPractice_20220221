@@ -29,14 +29,14 @@ class MainActivity : AppCompatActivity() {
 
 //                    승인이 OK일때 할 행동.
                     val myUri = Uri.parse("tel:01040660806")
-                    val myIntent = Intent( Intent.ACTION_CALL, myUri)
+                    val myIntent = Intent(Intent.ACTION_CALL, myUri)
                     startActivity(myIntent)
 
                 }
 
                 override fun onPermissionDenied(deniedPermissions: MutableList<String>?) {
 //                      거절되었을때 할 행동.
-                    Toast.makeText(this@MainActivity, "권한이 거절되어, 통화가 불가능합니다.", Toast.LENGTH_SHORT )
+                    Toast.makeText(this@MainActivity, "권한이 거절되어, 통화가 불가능합니다.", Toast.LENGTH_SHORT)
                         .show()
                 }
 
@@ -49,11 +49,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
-
 //        버튼 이외의, TextView, ImageView, LinearLayout 등등도 setOnClickListener로 이벤트 처리가 가능함.
 
-        imgProfile.setOnClickListener{
+        imgProfile.setOnClickListener {
 
 //            사진을 크게보는 액티비티로 이동
 
@@ -63,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-   fun setValues(){
+    fun setValues() {
 
 
     }
