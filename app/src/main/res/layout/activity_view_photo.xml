@@ -8,10 +8,12 @@
     android:background="@color/black"
     tools:context=".VIewPhotoActivity">
 
-    <ImageView
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photo_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/kim"/>
-
+        android:src="@drawable/kim"
+        />
 
 </LinearLayout>
